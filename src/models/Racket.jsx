@@ -10,14 +10,14 @@ import { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { a } from '@react-spring/three'
 
-import paddleScene from '../assets/paddle.glb'
+import RacketScene from '../assets/Racket.glb'
 
-const Paddle = (props) => {
-  const paddleRef = useRef(null);
-  const { nodes, materials } = useGLTF(paddleScene);
+const Racket = (props) => {
+  const RacketRef = useRef(null);
+  const { nodes, materials } = useGLTF(RacketScene);
   
   return (
-    <a.group {...props} dispose={null} ref={paddleRef} >
+    <a.group {...props} dispose={null} >
       <mesh
         castShadow
         receiveShadow
@@ -84,4 +84,4 @@ const Paddle = (props) => {
   )
 }
 
-export default Paddle;
+export default Racket;
